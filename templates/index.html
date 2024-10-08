@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gematria Calculator</title>
+    <title>מחשבון גימטריה</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,16 +19,21 @@
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 500px;
         }
         h1 {
             text-align: center;
             color: #333;
         }
-        input {
+        textarea {
             width: 100%;
             padding: 0.5rem;
             margin-bottom: 1rem;
             font-size: 1rem;
+            min-height: 100px;
+            resize: vertical;
+            box-sizing: border-box;
         }
         button {
             width: 100%;
@@ -53,9 +58,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Gematria Calculator</h1>
-        <input type="text" id="inputText" placeholder="Enter Hebrew text">
-        <button onclick="calculateGematria()">Calculate</button>
+        <h1>מחשבון גימטריה</h1>
+        <textarea id="inputText" placeholder="הכנס כאן טקסט בעברית" rows="4"></textarea>
+        <button onclick="calculateGematria()">חשב</button>
         <div id="result"></div>
     </div>
     <script>
@@ -70,7 +75,7 @@
             })
             .then(response => response.json())
             .then(data => {
-                document.getElementById('result').textContent = `Gematria value: ${data.result}`;
+                document.getElementById('result').textContent = `ערך הטקסט הוא: ${data.result}`;
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -79,4 +84,3 @@
     </script>
 </body>
 </html>
-

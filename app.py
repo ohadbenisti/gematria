@@ -33,7 +33,7 @@ gimatriya_dict = {
     1509 :90, #Tsadi Sofith (ץ)
 }
 
-def gimatiya(the_text):
+def gimatria(the_text):
     total_value = 0
     for letter in the_text:
         letter_ASCII = ord(letter)
@@ -49,7 +49,7 @@ def index():
 @app.route('/calculate', methods=['POST'])
 def calculate():
     text = request.form['text']
-    result = gimatiya(text)
+    result = gimatria(text)
     return jsonify({'result': result})
 
 if __name__ == '__main__':
