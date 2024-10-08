@@ -22,7 +22,7 @@ This project is a web-based Gematria Calculator that allows users to input Hebre
 
 ### Steps
 1. Clone the repository:
-   git clone https://github.com/ohadbenisti/gematria-calculator.git
+   git clone https://github.com/ohadbenisti/gematria.git
    cd gematria-calculator
 
 2. Install the required dependencies:
