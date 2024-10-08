@@ -10,7 +10,7 @@ This project is a web-based Gematria Calculator that allows users to input Hebre
 - Responsive design for use on various devices
 
 ## Technologies Used
-- Backend: Python 3.x with Flask framework
+- Backend: Python with Flask framework
 - Frontend: HTML, CSS, JavaScript
 - API: RESTful API for Gematria calculations
 
